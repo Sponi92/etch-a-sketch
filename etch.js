@@ -20,7 +20,7 @@ for (i=0;i<16;i++){
 const hoverover= document.querySelectorAll(".content");
 hoverover.forEach(hoverover => {hoverover.addEventListener ("mouseover",changeBackground)});
 
-function changeBackground(){
+/function changeBackground(){
 const background =document.querySelectorAll(".content");
 background.forEach(background.classList.add("hover"));
 };
