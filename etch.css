@@ -3,6 +3,7 @@ display:grid;
 width:500px;
 height:500px;
 border-style:solid;
+margin:auto;
 }
 .container1{
 display:block;
@@ -18,5 +19,10 @@ width:6.25%;
 }
 .hover {
 background-color:black;
+}
+#btn{
+display:block;
+margin:auto;
+margin-bottom:5%;
 }
 

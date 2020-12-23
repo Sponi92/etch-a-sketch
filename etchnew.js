@@ -18,22 +18,11 @@ for (i=0;i<16;i++){
 
 
 const hoverover= document.querySelectorAll(".content");
-hoverover.forEach(hoverover => {hoverover.onmouseover = function(){changeBackground(hoverover)}});
+hoverover.forEach(hoverover => hoverover.addEventListener ("mouseover",function() {changeBackground(hoverover)}));
 
 function changeBackground(x){
-
 x.classList.add("hover");
 
 };
-
-document.querySelector("#btn").addEventListener("click", clearandNew);
-
-function clearandNew(){
-const clear=document.querySelectorAll(".content");
-for (i=0; i<clear.length; i++){
-clear[i].classList.remove("hover");
-}
-input=window.prompt("How many Squares per side do you want?");
-}
 
 
