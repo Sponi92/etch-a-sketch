@@ -63,7 +63,7 @@ function clearandNew(){
 		clear[i].remove();
 }
 	input=window.prompt("How many Squares per side do you want?");
-	if (input>29 || isNaN(input)){
+	if (input>100 || isNaN(input)){
 	alert("ERROR!");
 	}
 	else {
@@ -79,7 +79,7 @@ function clearandRainbow(){
 		clear[i].remove();
 }
 	input=window.prompt("How many Squares per side do you want?");
-	if (input>29 || isNaN(input)){
+	if (input>100 || isNaN(input)){
 	alert("ERROR!");
 	}
 	else {
@@ -95,7 +95,7 @@ function clearandGradient(){
 		clear[i].remove();
 }
 	input=window.prompt("How many Squares per side do you want?");
-	if (input>29 || isNaN(input)){
+	if (input>100 || isNaN(input)){
 	alert("ERROR!");
 	}
 	else {
