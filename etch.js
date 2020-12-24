@@ -45,4 +45,7 @@ function clearandNew(){
  	
 }
 
+function hello(){
+}
+
 
