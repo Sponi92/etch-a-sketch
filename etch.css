@@ -1,6 +1,8 @@
 :root {
 --columns: ;
 --rows: ;
+--color: ;
+--gradientBlack: ;
 }
 
 #container{
@@ -16,9 +18,21 @@ margin:auto;
 .hover {
 background-color:black;
 }
-#btn{
-display:block;
-margin:auto;
+.button{
+display:inline-block;
+margin:2%;
 margin-bottom:5%;
+}
+#buttons{
+text-align:center;
+}
+.rainbow{
+background-color:var(--color);
+}
+.gradient{
+background-color:black;
+opacity:var(--gradientBlack);
+}
+
 }
 
