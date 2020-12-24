@@ -25,4 +25,11 @@ x.classList.add("hover");
 
 };
 
+const hoverover= document.querySelectorAll(".content");
+hoverover.forEach(hoverover => {hoverover.onmouseover = function(){changeBackground(hoverover)}});
 
+function changeBackground(x){
+
+	x.classList.add("hover");
+
+};
