@@ -1,3 +1,5 @@
+//create Grid and use Black as fill method
+// add listeners to the 3 buttons
 makeGrid(16);
 addClass(changeBackgroundBlack);
 document.querySelector("#btn").addEventListener("click", clearandNew);
@@ -20,6 +22,7 @@ function clearandGradient(){
 	addClass(changeBackgroundGradient);	
 }
 
+//clears the grid and asks user how the new grid should be defined
 function clear(){
 	const clear=document.querySelectorAll(".grid-item");
 	for (i=0; i<clear.length; i++){
@@ -33,6 +36,7 @@ function clear(){
 		makeGrid(input);
 	}
 }
+//adds class with the corresponding filling color on mouseover
 function addClass(param1){
 	const hoverover= document.querySelectorAll(".grid-item");
 	hoverover.forEach(hoverover => hoverover.addEventListener ("mouseover",function() {param1(hoverover)}));
@@ -54,7 +58,7 @@ function changeBackgroundGradient(x){
 	i++;
 	return i;
 }
-
+//creates the grid with the squares the user wants
 function makeGrid(input) {
 	const container= document.querySelector("#container");
 	container.style.setProperty('--rows', input);
