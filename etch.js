@@ -1,40 +1,40 @@
 //create Grid and use Black as fill method
 // add listeners to the 3 buttons
-makeGrid(16);
+let changer=0;
+window.addEventListener("load", makeGrid(16));
 addClass(changeBackgroundBlack);
+let input=16;
+
 document.querySelector("#btn").addEventListener("click", clearandNew);
 document.querySelector("#btn1").addEventListener("click", clearandRainbow);
 document.querySelector("#btn2").addEventListener("click", clearandGradient);
 
 function clearandNew(){
-	clear();
-	addClass(changeBackgroundBlack);	
+	clear(input);
+	addClass(changeBackgroundBlack);
+	changer=0;	
 }
 
 function clearandRainbow(){
-	clear();
-	addClass(changeBackgroundRainbow);	
+	clear(input);
+	addClass(changeBackgroundRainbow);
+	changer=1;	
 }
 
 function clearandGradient(){
-	clear();
+	clear(input);
 	i=0;
 	addClass(changeBackgroundGradient);	
+	changer=2;
 }
 
-//clears the grid and asks user how the new grid should be defined
-function clear(){
+//clears the grid
+function clear(input){
 	const clear=document.querySelectorAll(".grid-item");
 	for (i=0; i<clear.length; i++){
 		clear[i].remove();
 }
-	input=window.prompt("How many Squares per side do you want?");
-	if (input>100 || isNaN(input)){
-		alert("ERROR!");
-	}
-	else {
-		makeGrid(input);
-	}
+	makeGrid(input);
 }
 //adds class with the corresponding filling color on mouseover
 function addClass(param1){
@@ -67,6 +67,22 @@ function makeGrid(input) {
     		let cell = document.createElement("div");
     		cell.innerText = " ";
     		container.appendChild(cell).className = "grid-item";
-    		
 	}
 }
+window.addEventListener("load", function(){
+  var slider = document.querySelector("input[type='range']");
+  slider.addEventListener("change", function(){
+    input=parseInt(this.value);
+    clear(input);
+    if (changer===0){
+    clearandNew();
+    }
+    else if (changer===1){
+    clearandRainbow();
+    }
+    else{
+    clearandGradient();
+    }
+  });
+});
+

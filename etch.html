@@ -4,12 +4,17 @@
 <link rel="stylesheet" href="etch.css">
 </head>
 <body>
+<h1 id="uberschrift"> Etch-A-Sketch</h1>
 <div id="buttons"> 
-<button type="button" class="button" id="btn">New Grid</button>
+<button type="button" class="button" id="btn">Black Grid</button>
 <button type="button" class="button" id="btn1">Rainbow</button>
 <button type="button" class="button" id="btn2">Gradient Black</button>
 </div>
 <div id="container"> </div>
+<div class="slidecontainer">
+<div id="label"><label for="myRange"> Choose Solution:</label></div>
+<input type="range" min="2" max="100" value="16" class="slider" id="myRange">
+</div>
 <script src="etch.js"></script>
 </body>
 </html>

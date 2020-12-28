@@ -4,24 +4,34 @@
 --color: ;
 --gradientBlack: ;
 }
-
+html { 
+  background: url(pictures/background.webp) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+h1{
+text-align:center;
+text-decoration:underline;
+margin-top:2%;
+}
 #container{
+background: white;
 display:grid;
-width:500px;
-height:500px;
+width:60vh;
+height:60vh;
 grid-template-columns:repeat(var(--columns),1fr);
 grid-template-rows:repeat(var(--rows),1fr);
 border-style:solid;
 margin:auto;
 }
-
 .hover {
 background-color:black;
 }
 .button{
 display:inline-block;
 margin:2%;
-margin-bottom:5%;
 }
 #buttons{
 text-align:center;
@@ -33,6 +43,12 @@ background-color:var(--color);
 background-color:black;
 opacity:var(--gradientBlack);
 }
-
+.slidecontainer{
+margin-top:2%;
+display:block;
+text-align:center;
 }
-
+#myRange{
+margin-top:1.5%;
+width:60vh;
+}
